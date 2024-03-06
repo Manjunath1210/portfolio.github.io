@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Font from Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600;700;900&display=swap">
+
+    <style>
+        /* CSS for centering the skills section */
+        .skills {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .skills-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        .skills-list li {
+            margin-bottom: 10px; /* Adjust the margin as needed */
+            padding-bottom: 10px; /* Adjust the padding as needed */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .skills-list li img {
+            margin-right: 10px; /* Adjust the margin as needed */
+        }
+    </style>
+</head>
+
+<body onload="document.body.style.opacity='1'">
+    <div class="hero">
+        <div class="nav">
+            <div class="logo">
+                <h2>Portfolio</h2>
+            </div>
+            <div class="link">
+                <ul>
+                    <li><a href="#" class="active" onclick="showAbout()">About</a></li>
+                    <li><a href="#" onclick="showExperience()">Experience</a></li>
+                    <li><a href="#" onclick="showEducation()">Education</a></li>
+                    <li><a href="#" onclick="showSkills()">Skills</a></li> <!-- Added Skills link -->
+                    <li><a href="#" onclick="showContact()">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="content" id="content">
+                <!-- Content will be loaded dynamically here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Skills section -->
+    <div class="skills" id="skills" style="display:none;">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+            <li>
+                <img src="py.png" alt="Python Logo" width="50px">
+                Python
+            </li>
+            <li>
+                <img src="sql.png" alt="SQL Logo" width="50px">
+                SQL
+            </li>
+            <li>
+                <img src="Tableau.png" alt="Tableau Logo" width="50px">
+                Tableau
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        function showAbout() {
+            hideAllSections();
+            var content = document.getElementById("content");
+            content.innerHTML = `
+                <div class="about">
+                    <img src="pic2.jpg" alt="men" class="profile-pic">
+                    <div class="details">
+                        <h1>Manjunath A</h1>
+                        <p>"Dynamic IT Graduate Actively Seeking Job Opportunities in the IT Field."</p>
+                    </div>
+                </div>`;
+        }
+
+        function showEducation() {
+            hideAllSections();
+            var content = document.getElementById("content");
+            content.innerHTML = `
+                <div class="education">
+                    <h2>Education</h2>
+                    <ul class="education-list">
+                        <li>
+                            <h3>Sona college of Technology</h3>
+                            <p>B.Tech Information Technology (2020 - 2023) CGPA : 7.63</p>
+                        </li>
+                        <li>
+                            <h3>Paavai Polytechnic College</h3>
+                            <p>Diploma in Computer Science (2017 - 2020) - Percentage: 75%</p>
+                        </li>
+                        <li>
+                            <h3>Vidhya Vikas Matriculation. Hr.Sec.School</h3>
+                            <p>Class X-2017 Percentage: 68%</p>
+                        </li>
+                    </ul>
+                </div>`;
+        }
+
+        function showExperience() {
+            hideAllSections();
+            var content = document.getElementById("content");
+            content.innerHTML = `
+                <div class="experience">
+                    <h2>Projects</h2>
+                    <div class="project">
+                        <h3>IoT-Based Safety Gadget for Child Safety Monitoring and Notification</h3>
+                        <p>Description: The Child Safety IoT Monitoring System is designed to ensure the safety of children by tracking their location and activities. The system utilizes IoT technology to monitor daily activities and notify parents via SMS if the child goes to an unknown or dangerous location. It features high reliability, short response time, and easy accessibility from any mobile device. Key features include Geo-fencing, Discrete Panic Button, Long battery life, and Real-Time Tracking. The system is controlled by NodeMCU microcontroller and utilizes GPS and GSM modules for accurate tracking and alerting.</p>
+                    </div>
+                    <div class="project">
+                        <h3>Efficient Cloud Storage Data De-duplication System</h3>
+                        <p>Description: The proposed Dynamic Reduce Data Deduplication (DRDD) scheme addresses the challenge of duplicate data in cloud storage systems, aiming to optimize storage space and reduce data transfer bandwidth. With the dynamic nature of data usage in the cloud, this scheme adapts to changing data patterns over time, prioritizing frequently accessed data chunks for deduplication. By implementing dynamic deduplication techniques, storage efficiency is improved while maintaining redundancy for fault tolerance in cloud storage environments.</p>
+                    </div>
+                    <div class="project">
+                        <h3>Major and Minor Projects on Cloud Computing</h3>
+                        <p>Description: This project initiative involves two aspects of cloud computing solutions. Firstly, a major project focuses on implementing an Enterprise Resource Planning (ERP) system on cloud infrastructure, enabling organizations to streamline their business processes across various functions. Concurrently, a minor project entails the development of a cloud-based file sharing and collaboration platform, facilitating seamless document management and team collaboration. Both projects leverage cloud technology to enhance scalability, accessibility, and efficiency in organizational operations.</p>
+                    </div>
+                    <div class="project">
+                        <h3>YouTube Data Harvesting and Warehousing (SQL, MongoDB, Streamlit)</h3>
+                        <p>Description: This project involves harvesting data from YouTube using APIs and storing it in a data warehouse. Utilizing SQL and MongoDB databases, the collected data is organized and stored efficiently. Streamlit, a Python library,is employed to create interactive web applications for data visualization and analysis, providing users with insights into YouTube trends, engagement metrics, and content performance. This project showcases the integration of multiple technologies to create a comprehensive platform for managing and analyzing YouTube data.</p>
+                    </div>
+                    <h2>Internship</h2>
+                    <div class="project">
+                        <h3>Cloud Computing</h3>
+                        <p>Description: During my internship in Cloud Computing, I had the opportunity to dive deep into the world of cloud technologies, gaining practical experience in deploying, managing, and optimizing cloud-based solutions. I actively contributed to various projects, learning how to leverage platforms such as AWS, Azure, or Google Cloud to develop scalable and resilient applications. Throughout the internship, I honed my skills in areas such as cloud architecture, virtualization, containerization, and automation, while collaborating with cross-functional teams to deliver innovative solutions that address real-world challenges in the cloud computing domain.</p>
+                    </div>
+                </div>`;
+        }
+
+        function showSkills() {
+            hideAllSections();
+            var skills = document.getElementById("skills");
+            skills.style.display = "block";
+        }
+
+        function showContact() {
+            hideAllSections();
+            var content = document.getElementById("content");
+            content.innerHTML = `
+                <div class="contact">
+                    <h2>Contact</h2>
+                    <ul>
+                        <li><i class='bx bx-envelope'></i> Email: manjusaba2@gmail.com</li>
+                        <li><i class='bx bx-phone'></i> Phone: 6379457885</li>
+                        <li><i class='bx bxl-linkedin'></i> LinkedIn: linkedin.com/in/manjunath-a</li>
+                    </ul>
+                </div>`;
+            var skills = document.getElementById("skills");
+            skills.style.display = "none"; // Hide the skills section
+        }
+
+        function hideAllSections() {
+            var sections = document.querySelectorAll('.main > .content > *');
+            sections.forEach(section => {
+                if (section.id !== "skills") { // Only hide if not the skills section
+                    section.style.display = 'none';
+                }
+            });
+        }
+
+        // Hide all sections initially
+        hideAllSections();
+    </script>
+</body>
+
+</html>

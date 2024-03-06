@@ -1,0 +1,168 @@
+body {
+    opacity: 0;
+    transition: opacity 3s;
+    background-image: url('1.jpg'); /* Set the path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Ensures the background image remains fixed while scrolling */
+    height: 100%; /* Ensure body takes full height of viewport */
+}
+
+/* Navigation styles */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 200px;
+}
+
+.nav .logo h2 {
+    color: white; /* Set logo text color to white */
+}
+
+.nav .link ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav .link ul a {
+    text-decoration: none;
+    color: white; /* Set link text color to white */
+    font-weight: 600;
+    transition: all 200ms ease-in-out;
+}
+
+.nav .link ul a.active {
+    color: #f4637b; /* Set active link text color */
+}
+
+.nav .link ul a:hover {
+    color: #f4637b; /* Set link hover text color */
+}
+
+/* Content styles */
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.content {
+    width: 80%;
+    max-width: 1200px;
+    color: white; /* Set content text color to white */
+    font-family: 'Arial', sans-serif; /* Specify the font family */
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about .profile-pic {
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.about .details {
+    text-align: center;
+}
+
+.about h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.about p {
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Updated selectors for sections */
+.education-section, .experience-section, .contact-section {
+    display: none;
+    margin-top: 40px;
+}
+
+.education-section h2, .experience-section h2, .contact-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.education-list {
+    list-style-type: none;
+}
+
+.education-list h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.education-list p {
+    font-size: 16px;
+}
+
+.project {
+    margin-bottom: 40px;
+}
+
+.project h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 16px;
+}
+
+.contact-section ul {
+    list-style: none;
+}
+
+.contact-section li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.contact-section i {
+    margin-right: 10px;
+}
+
+/* CSS for centering the skills section */
+.skills {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.skills h2 {
+    color: white; /* Set heading color to white */
+}
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.skills-list li {
+    color: white; /* Set text color to white */
+    font-size: 18px; /* Optional: Set font size */
+    margin-bottom: 10px; /* Adjust the margin as needed */
+    padding-bottom: 10px; /* Adjust the padding as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.skills-list li img {
+    margin-right: 10px; /* Adjust the margin as needed */
+}
+
